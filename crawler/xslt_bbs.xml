@@ -1,0 +1,55 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+<xsl:template match="/">
+<论坛列表>
+<xsl:apply-templates select="//*[@id='forum']/table/tbody/tr[position()>=1 and count(.//*[@class='topic']/a/text())>0]" mode="论坛列表"/>
+</论坛列表>
+</xsl:template>
+
+
+<xsl:template match="//*[@id='forum']/table/tbody/tr[position()>=1 and count(.//*[@class='topic']/a/text())>0]" mode="论坛列表">
+<item>
+<标题>
+<xsl:value-of select="*//*[@class='topic']/a/text()"/>
+<xsl:value-of select="*[@class='topic']/a/text()"/>
+<xsl:if test="@class='topic'">
+<xsl:value-of select="a/text()"/>
+</xsl:if>
+</标题>
+<发帖人>
+<xsl:value-of select="*//*[@class='created']/text()[position()=2]"/>
+<xsl:value-of select="*[@class='created']/text()[position()=2]"/>
+<xsl:if test="@class='created'">
+<xsl:value-of select="text()[position()=2]"/>
+</xsl:if>
+</发帖人>
+<帖子详细链接>
+<xsl:value-of select="*//*[@class='topic']/a/@href"/>
+<xsl:value-of select="*[@class='topic']/a/@href"/>
+<xsl:if test="@class='topic'">
+<xsl:value-of select="a/@href"/>
+</xsl:if>
+</帖子详细链接>
+<回复数>
+<xsl:value-of select="*//*[@class='replies']/text()"/>
+<xsl:value-of select="*[@class='replies']/text()"/>
+<xsl:if test="@class='replies'">
+<xsl:value-of select="text()"/>
+</xsl:if>
+</回复数>
+<发帖时间>
+<xsl:value-of select="*//*[@class='created']/text()[position()=1]"/>
+<xsl:value-of select="*[@class='created']/text()[position()=1]"/>
+<xsl:if test="@class='created'">
+<xsl:value-of select="text()[position()=1]"/>
+</xsl:if>
+</发帖时间>
+<最后回复时间>
+<xsl:value-of select="*//*[@class='last-reply active']/text()[position()=1]"/>
+<xsl:value-of select="*[@class='last-reply active']/text()[position()=1]"/>
+<xsl:if test="@class='last-reply active'">
+<xsl:value-of select="text()[position()=1]"/>
+</xsl:if>
+</最后回复时间>
+</item>
+</xsl:template>
+</xsl:stylesheet>
