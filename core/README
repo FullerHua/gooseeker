@@ -1,3 +1,6 @@
 # Created at 15:10, May 18,2016
 # 这个目录存放基本类
 # 基本类实现：使用xslt作为模板提取html或DOM内容
+
+# 2016-05-25 Upload gooseeker.py
+# Class: gsExtractor V1.0
