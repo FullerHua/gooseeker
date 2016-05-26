@@ -9,6 +9,7 @@
 # github: https://github.com/FullerHua/jisou/core/gooseeker.py
 
 from urllib import request
+from urllib.parse import quote
 from lxml import etree
 import time
 
