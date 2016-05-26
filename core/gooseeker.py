@@ -12,7 +12,7 @@ from urllib import request
 from lxml import etree
 import time
 
-class xsltExtractor(object):
+class gsExtractor(object):
     xslt = ""
     def _init_(self):
         xslt = ""
