@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # 模块名: gooseeker
 # 类名: gsExtractor
-# Version: 1.0
+# Version: 2.0
 # 说明: html内容提取器
 # 功能: 使用xslt作为模板，快速提取HTML DOM中的内容。
 # released by 集搜客(http://www.gooseeker.com) on May 18, 2016
@@ -26,9 +26,12 @@ class gsExtractor(object):
     # 从字符串获得xslt
     def setXsltFromMem(self , xsltStr):
         self.xslt = xsltStr
-    # 预留:通过API接口获得xslt
-    def setXsltFromAPI(self):
-        self.xslt = ""
+    # 通过GooSeeker API接口获得xslt
+    def setXsltFromAPI(self , APIKey , Theme):
+        apiurl = "http://test.gooseeker.com/api/getextractor?key="+ APIKey +"&theme="+quote(Theme)
+        print(apiurl)
+        apiconn = request.urlopen(apiurl)
+        self.xslt = apiconn.read()
     # 返回当前xslt
     def getXslt(self):
         return self.xslt
