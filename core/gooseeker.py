@@ -29,7 +29,7 @@ class gsExtractor(object):
         self.xslt = xsltStr
     # 通过GooSeeker API接口获得xslt
     def setXsltFromAPI(self , APIKey , Theme):
-        apiurl = "http://test.gooseeker.com/api/getextractor?key="+ APIKey +"&theme="+quote(Theme)
+        apiurl = "http://www.gooseeker.com/api/getextractor?key="+ APIKey +"&theme="+quote(Theme)
         print(apiurl)
         apiconn = request.urlopen(apiurl)
         self.xslt = apiconn.read()
