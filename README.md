@@ -14,17 +14,17 @@ GooSeeker发布基于xslt的内容提取器，xslt可以通过GooSeeker API获�
 ========
 入口页
 
-    http://www.gooseeker.com/land/python.html
+* http://www.gooseeker.com/land/python.html
 
 Python交流园地
 
-    http://www.gooseeker.com/doc/forum-59-1.html
+* http://www.gooseeker.com/doc/forum-59-1.html
 
 知乎专栏
 
-    https://zhuanlan.zhihu.com/gooseeker
+* https://zhuanlan.zhihu.com/gooseeker
 
 GooSeeker收割模式网络爬虫
 
-    http://www.gooseeker.com
+* http://www.gooseeker.com
 
