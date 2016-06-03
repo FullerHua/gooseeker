@@ -1,0 +1,55 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+<xsl:template match="/">
+<列表>
+<xsl:apply-templates select="//*[@class='gl-item' and count(.//*[@class='p-name']/a/em/text())>0]" mode="列表"/>
+</列表>
+</xsl:template>
+
+
+<xsl:template match="//*[@class='gl-item' and count(.//*[@class='p-name']/a/em/text())>0]" mode="列表">
+<item>
+<手机名称>
+<xsl:value-of select="*//*[@class='p-name']/a/em/text()"/>
+<xsl:value-of select="*[@class='p-name']/a/em/text()"/>
+<xsl:if test="@class='p-name'">
+<xsl:value-of select="a/em/text()"/>
+</xsl:if>
+</手机名称>
+<价格>
+<xsl:value-of select="*//*[@class='p-price']/strong"/>
+<xsl:value-of select="*[@class='p-price']/strong"/>
+<xsl:if test="@class='p-price'">
+<xsl:value-of select="strong"/>
+</xsl:if>
+</价格>
+<评价人数>
+<xsl:value-of select="*//*[@class='p-commit']/strong/a/text()"/>
+<xsl:value-of select="*[@class='p-commit']/strong/a/text()"/>
+<xsl:if test="@class='p-commit'">
+<xsl:value-of select="strong/a/text()"/>
+</xsl:if>
+</评价人数>
+<手机详情页链接>
+<xsl:value-of select="*//*[@class='p-name']/a/@href"/>
+<xsl:value-of select="*[@class='p-name']/a/@href"/>
+<xsl:if test="@class='p-name'">
+<xsl:value-of select="a/@href"/>
+</xsl:if>
+</手机详情页链接>
+<店铺名称>
+<xsl:value-of select="*//*[@class='p-shop']/span/a/text()"/>
+<xsl:value-of select="*[@class='p-shop']/span/a/text()"/>
+<xsl:if test="@class='p-shop'">
+<xsl:value-of select="span/a/text()"/>
+</xsl:if>
+</店铺名称>
+<店铺链接>
+<xsl:value-of select="*//*[@class='p-shop']/span/a/@href"/>
+<xsl:value-of select="*[@class='p-shop']/span/a/@href"/>
+<xsl:if test="@class='p-shop'">
+<xsl:value-of select="span/a/@href"/>
+</xsl:if>
+</店铺链接>
+</item>
+</xsl:template>
+</xsl:stylesheet>
