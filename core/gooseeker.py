@@ -14,9 +14,8 @@ from lxml import etree
 import time
 
 class gsExtractor(object):
-    xslt = ""
     def _init_(self):
-        xslt = ""
+        self.xslt = ""
     # 从文件读取xslt
     def setXsltFromFile(self , xsltFilePath):
         file = open(xsltFilePath , 'r' , encoding='UTF-8')
@@ -28,9 +27,12 @@ class gsExtractor(object):
     def setXsltFromMem(self , xsltStr):
         self.xslt = xsltStr
     # 通过GooSeeker API接口获得xslt
-    def setXsltFromAPI(self , APIKey , Theme):
-        apiurl = "http://www.gooseeker.com/api/getextractor?key="+ APIKey +"&theme="+quote(Theme)
-        print(apiurl)
+    def setXsltFromAPI(self , APIKey , theme, middle=None, bname=None):
+        apiurl = "http://www.gooseeker.com/api/getextractor?key="+ APIKey +"&theme="+quote(theme)
+        if (middle):
+            apiurl = apiurl + "&middle="+quote(middle)
+        if (bname):
+            apiurl = apiurl + "&bname="+quote(bname)
         apiconn = request.urlopen(apiurl)
         self.xslt = apiconn.read()
     # 返回当前xslt
