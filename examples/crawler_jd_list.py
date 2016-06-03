@@ -1,4 +1,4 @@
-#coding=utf-8
+# -*- coding:utf-8 -*- 
 # 爬取京东商品列表， 以手机商品列表为例
 # 示例网址：http://list.jd.com/list.html?cat=9987,653,655&page=1&JL=6_0_0&ms=5
 # crawler_jd_list.py
