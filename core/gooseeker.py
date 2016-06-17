@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # 模块名: gooseeker
-# 类名: gsExtractor
+# 类名: GsExtractor
 # Version: 2.0
 # 说明: html内容提取器
 # 功能: 使用xslt作为模板，快速提取HTML DOM中的内容。
@@ -13,7 +13,7 @@ from urllib.parse import quote
 from lxml import etree
 import time
 
-class gsExtractor(object):
+class GsExtractor(object):
     def _init_(self):
         self.xslt = ""
     # 从文件读取xslt
