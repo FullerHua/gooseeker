@@ -32,3 +32,16 @@ GooSeeker收割模式网络爬虫
 
 * http://www.gooseeker.com
 
+项目目录文件说明
+================
+* core/gooseeker.py 提取器类
+* core/README  说明文件
+
+* crawler/anjuke.py  采集安居客房产经纪人
+* crawler/result1.xml  安居客房产经纪人结果文件1
+* crawler/result2.xml  安居客房产经纪人结果文件2
+* crawler/crawl_gooseeker_bbs.py  采集集搜客论坛内容
+* crawler/xslt_bbs.xml  集搜客论坛内容提取本地xslt文件
+
+* crawler/simpleSpider  一个小爬虫(基于Scrapy开源框架)
+* crawler/tmSpider  采集天猫商品信息(基于Scrapy开源框架)
