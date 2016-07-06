@@ -36,6 +36,7 @@ GooSeeker收割模式网络爬虫
 项目目录文件说明
 ================
 gooseeker
+
 	- core/gooseeker.py 提取器类
 	- core/README  说明文件
 
