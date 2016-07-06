@@ -3,7 +3,7 @@
 
 目录文件说明
 ================
-gooseeker
+crawler
 
     - anjuke.py  采集安居客房产经纪人
     - result1.xml  安居客房产经纪人结果文件1
