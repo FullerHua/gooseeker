@@ -22,7 +22,7 @@ class Spider:
         time.sleep(self.waittime)
         html = browser.execute_script("return document.documentElement.outerHTML")
         doc = etree.HTML(html)
-        jdlistExtra = gsExtractor()
+        jdlistExtra = GsExtractor()
         jdlistExtra.setXsltFromFile("jd_list.xml")
         output = jdlistExtra.extract(doc)
         return output
