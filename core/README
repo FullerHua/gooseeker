@@ -16,7 +16,8 @@
 #	Lxml官网地址: http://lxml.de/
 #	Windows版安装包下载: http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
 #	对应windows下python3.5的安装文件为 lxml-3.6.0-cp35-cp35m-win32.whl
-#	下载完成后，在windows下打开一个命令窗口, 切换到刚下载的whl文件的存放目录，运行pip install lxml-3.6.0-cp35-cp35m-win32.whl
+#	下载完成后，在windows下打开一个命令窗口, 切换到刚下载的whl文件的存放目录
+#	运行pip install lxml-3.6.0-cp35-cp35m-win32.whl
 # 3. 下载提取器文件
 #	下载地址: https://github.com/FullerHua/goo ... r/core/gooseeker.py
 #	把gooseeker.py保存在项目目录下
