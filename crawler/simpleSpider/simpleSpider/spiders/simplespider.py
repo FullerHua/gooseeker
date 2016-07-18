@@ -31,7 +31,7 @@ class SimpleSpider(scrapy.Spider):
         time.sleep(3)
         #get xslt
         extra=GsExtractor()
-        extra.setXsltFromAPI("0a3898683f265e7b28991e0615228baa", "淘宝天猫_商品详情30474")
+        extra.setXsltFromAPI("31d24931e043e2d5364d03b8ff9cc77e", "淘宝天猫_商品详情30474")
         # get doc
         html = self.browser.execute_script("return document.documentElement.outerHTML")
         doc = etree.HTML(html)

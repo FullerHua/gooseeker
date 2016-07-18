@@ -2,7 +2,7 @@
 import time
 import scrapy
 
-import tmSpider.gooseeker.gsextractor as gsextractor
+import tmSpider.gooseeker.Gsextractor as gsextractor
 
 class TmallSpider(scrapy.Spider):
     name = "tmall"
@@ -22,7 +22,7 @@ class TmallSpider(scrapy.Spider):
         html = response.body
         print("----------------------------------------------------------------------------")
         extra=gsextractor.GsExtractor()
-        extra.setXsltFromAPI("0a3898683f265e7b28991e0615228baa", "淘宝天猫_商品详情30474","tmall","list")
+        extra.setXsltFromAPI("31d24931e043e2d5364d03b8ff9cc77e", "淘宝天猫_商品详情30474","tmall","list")
 
         result = extra.extract(html)
         print(str(result).encode('gbk','ignore').decode('gbk'))
