@@ -49,3 +49,5 @@ gooseeker
 
 	- crawler/simpleSpider  一个小爬虫(基于Scrapy开源框架)
 	- crawler/tmSpider  采集天猫商品信息(基于Scrapy开源框架)
+
+	- test/readPdf.py  python读取pdf文档
