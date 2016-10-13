@@ -44,3 +44,7 @@ class GsExtractor(object):
         transform = etree.XSLT(xslt_root)
         result_tree = transform(html)
         return result_tree
+    # 提取方法，入参是html源码，返回是提取结果
+    def extractHTML(self , html):
+        doc = etree.HTML(html)
+        return self.extract(doc)
