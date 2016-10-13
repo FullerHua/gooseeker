@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # 模块名: gooseeker
 # 类名: GsExtractor
-# Version: 2.0
+# Version: 2.1
 # 说明: html内容提取器
 # 功能: 使用xslt作为模板，快速提取HTML DOM中的内容。
 # released by 集搜客(http://www.gooseeker.com) on May 18, 2016
